@@ -260,6 +260,16 @@
     </div>
     <p class="copyright">© 2026 Thaninrach</p>
   </div>
+  <script>
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', () => {
+
+        if (navigator.vibrate) {
+          navigator.vibrate(20);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
