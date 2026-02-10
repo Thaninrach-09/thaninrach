@@ -74,6 +74,40 @@
       transition: transform 0.3s ease;
     }
 
+    .btn {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 15px 25px;
+      margin: 10px auto;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      width: 80%;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    .btn {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      border-color: #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
     .facebook:hover {
       color: #1877f2;
     }
@@ -229,47 +263,47 @@
       animation-play-state: paused !important;
       cursor: pointer;
     }
+
+    .marquee-context {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.3;
+      font-weight: 300;
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="profile-img">
-      <img src="Thaninrach.jpg.jpg" alt="Thaninrach Profile">
-    </div>
-    <h1>My Social Media</h1>
-    <a href="https://www.facebook.com/Thaninrach" class="btn facebook" target="_blank"
-      style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" width="18" alt="FB">
-      <span>Facebook</span>
-    </a>
-    <a href="https://www.instagram.com/tt_254__/" class="btn instagram" target="_blank"
-      style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="18" alt="IG">
-      <span>Instagram</span>
-    </a>
-    <a href="https://www.tiktok.com/@thaninrach_09" class="btn tiktok" target="_blank"
-      style="display: flex; align-items: center; justify-content: center; gap: 8px;">
-      <img src="tiktok-icon-free-png.png" width="18" alt="TikTok">
-      <span>TikTok</span>
-    </a>
-    <div class="marquee-container">
-      <div class="marquee-content">
-        THANINRACH • FACEBOOK • INSTAGRAM • TIKTOK • 2026
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+    <div class="container">
+      <div class="profile-img">
+        <img src="Thaninrach.jpg.jpg" alt="Thaninrach Profile">
       </div>
+      <h1>My Social Media</h1>
+      <a href="https://www.facebook.com/Thaninrach" class="btn facebook" target="_blank"
+        style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" width="18" alt="FB">
+        <span>Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/tt_254__/" class="btn instagram" target="_blank"
+        style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width="18" alt="IG">
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.tiktok.com/@thaninrach_09" class="btn tiktok" target="_blank"
+        style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <img src="tiktok-icon-free-png.png" width="18" alt="TikTok">
+        <span>TikTok</span>
+      </a>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          THANINRACH • FACEBOOK • INSTAGRAM • TIKTOK • 2026
+        </div>
+      </div>
+      <p class="copyright">© 2026 Thaninrach</p>
     </div>
-    <p class="copyright">© 2026 Thaninrach</p>
-  </div>
-  <script>
-    document.querySelectorAll('.btn').forEach(button => {
-      button.addEventListener('click', () => {
-
-        if (navigator.vibrate) {
-          navigator.vibrate(20);
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>
