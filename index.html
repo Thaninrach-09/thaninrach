@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thaninrach's Links</title>
+  <title>Thaninrach</title>
   <link rel="icon" type="image/jpeg" href="Thaninrach.jpg.jpg">
   <style>
     body {
@@ -166,6 +166,16 @@
       }
     }
 
+    @keyframes marqueeMove {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
     .copyright {
       font-size: 12px;
       color: #888;
@@ -173,6 +183,24 @@
       text-align: center;
       font-weight: 300;
       letter-spacing: 1px;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      background: transparent;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+      letter-spacing: 2px;
+      animation: marqueeMove 15s linear infinite;
     }
   </style>
 </head>
@@ -197,7 +225,11 @@
       style="display: flex; align-items: center; justify-content: center; gap: 8px;">
       <img src="tiktok-icon-free-png.png" width="18" alt="TikTok">
     </a>
-
+    <div class="marquee-container">
+      <div class="marquee-content">
+        THANINRACH • FACEBOOK • INSTAGRAM • TIKTOK • 2026
+      </div>
+    </div>
     <p class="copyright">© 2026 Thaninrach</p>
   </div>
 </body>
