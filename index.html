@@ -260,6 +260,19 @@
       opacity: 0.3;
       font-weight: 300;
     }
+
+    .profile-img img {
+      filter: blur(15px);
+      opacity: 0;
+      transform: scale(0.9);
+      transition: filter 2.5s ease, opacity 2s ease, transform 2s ease;
+    }
+
+    .profile-img.active img {
+      filter: blur(0px);
+      opacity: 0.7;
+      transform: scale(1);
+    }
   </style>
 </head>
 
@@ -293,6 +306,22 @@
       </div>
       <p class="copyright">© 2026 Thaninrach</p>
     </div>
+    <script>
+      window.onload = function () {
+        const profileContainer = document.querySelector('.profile-img');
+        if (profileContainer) {
+          profileContainer.classList.add('active');
+        }
+
+        const elements = document.querySelectorAll('h1, .btn, p');
+        elements.forEach((el, index) => {
+          setTimeout(() => {
+            el.style.opacity = "0.8";
+            el.style.transform = "translateY(0)";
+          }, 500 * (index + 1));
+        });
+      };
+    </script>
 </body>
 
 </html>
